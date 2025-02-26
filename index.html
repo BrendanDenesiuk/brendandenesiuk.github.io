@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Brendan Denesiuk</title>
+    <link rel='icon' type='image/png' href='assets/favicon.png'>
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+    <div class='header'>
+
+        <div class='header-title'>Brendan Denesiuk</div>
+        <div class='topnav'>
+            <h2>Typography</h2>
+            <h2>|</h2>
+            <h2>Photography</h2>
+            <h2>|</h2>
+            <h2>Illustration</h2>
+        </div>
+    </div>
+    <div class='project-grid-container'></div>
+    <script>
+        const projects = [
+            ['the_progression', 'The Progression'],
+            ['wanderers_of_the_16_stars', 'Wanderers of the 16 Stars'],
+            ['aesthetic_the_deviant_and_the_proper', 'Aesthetic, The Deviant, & the Proper'],
+            ['exercises_in_typographic_style', 'Exercises in Typographic Style'],
+            ['i-swork-gi', 'i-swork-gi'],
+            ['aberrations_in_the_aperture', 'Aberrations in the Aperture']
+        ]
+        let projects_in_grid = []
+        const projectGridContainer = document.getElementsByClassName('project-grid-container')[0]
+        for (let i = 0; i < projects.length; i++) {
+
+            const projectGridItem = document.createElement('div')
+            projectGridItem.classList.add('project-grid-item')
+            projectGridItem.onclick = () => {
+                window.location.href = `project_pages/${projects[i][0]}.html`
+            }
+
+            const projectGridItemImg = document.createElement('img')
+            projectGridItemImg.src = `assets/images/homepage/${projects[i][0]}_home.png`
+            projectGridItemImg.alt = projects[i][1]
+            projectGridItem.appendChild(projectGridItemImg)
+
+            projectGridItem.appendChild(document.createElement('h3'))
+            projectGridItem.children[1].innerText = projects[i][1]
+            projectGridContainer.appendChild(projectGridItem)
+            projects_in_grid.push(projectGridItem)
+        }
+    </script>
+
+    <div style='width: 60%; align-self: center; margin: 0 auto; padding-top: 1%;'>
+        <div style='width: 100%'>
+            As a typographer (not type design!), writer, illustrator, & occa-
+            sional photographer—my works tend to overlap diciplines in
+
+            interesting & dynamic ways. My practice centers itself around
+            unique methods of storytelling & interactivity, most often
+            through the creation of narratives & bookworks.
+        </div>
+    </div>
+</body>
+</html>
