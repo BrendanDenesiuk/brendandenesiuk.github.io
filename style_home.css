@@ -1,0 +1,120 @@
+:root {
+    --main_background: #333233;
+    --main_text: #fdfdfd;
+}
+
+@font-face {
+    font-family: Bagnard-Serif-Regular;
+    src: url(assets/typefaces/Bagnard-Serif-Regular.otf);
+    font-weight: auto;
+    font-style: auto;
+}
+
+@font-face {
+    font-family: BDOGrotesk-Bold;
+    src: url(assets/typefaces/BDOGrotesk-Bold.otf);
+    font-weight: auto;
+    font-style: auto;
+}
+
+@font-face {
+    font-family: BDOGrotesk-Light;
+    src: url(assets/typefaces/BDOGrotesk-Light.otf);
+    font-weight: auto;
+    font-style: auto;
+}
+
+body {
+    background-color: var(--main_background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+/*region Header*/
+.header-title {
+    color: var(--main_text);
+    font-family: Bagnard-Serif-Regular;
+    font-size: 81px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header h2 {
+    float: left;
+    color: var(--main_text);
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-family: BDOGrotesk-Light;
+}
+/*endregion*/
+
+.project-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-column-gap: 1%;
+    width: 70%;
+}
+
+.project-grid-item {
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-grid-item:hover {
+    transform: scale(0.9);
+    transition: transform 0.5s;
+}
+
+.project-grid-item img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.project-grid-item img:hover {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.project-grid-item h3 {
+    color: var(--main_text);
+    font-family: BDOGrotesk-Light;
+    margin-top: 0;
+}
+
+.bio-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.bio-section-container {
+    width: 40%;
+}
+
+.bio-section-container p {
+    color: var(--main_text);
+    font-family: BDOGrotesk-Light;
+    text-align: justify;
+    hyphens: auto;
+    padding-bottom: 10px;
+}
+
+.bio-section-container img {
+    width: 100%;
+    float: right;
+}
