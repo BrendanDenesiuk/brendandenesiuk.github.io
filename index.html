@@ -20,12 +20,12 @@
     <div class='project-grid-container'></div>
     <script>
         const projects = [
-            ['the_progression', 'The Progression'],
-            ['wanderers_of_the_16_stars', 'Wanderers of the 16 Stars'],
-            ['aesthetic_the_deviant_and_the_proper', 'Aesthetic, The Deviant, & the Proper'],
-            ['exercises_in_typographic_style', 'Exercises in Typographic Style'],
-            ['i-swork-gi', 'i-swork-gi'],
-            ['aberrations_in_the_aperture', 'Aberrations in the Aperture']
+            ['the_progression', 'The Progression', 'theprogression'],
+            ['wanderers_of_the_16_stars', 'Wanderers of the 16 Stars', 'wanderersofthe16stars'],
+            ['aesthetic_the_deviant_and_the_proper', 'Aesthetic, The Deviant, & the Proper', 'aesthetic_the_deviant_and_the_proper'],
+            ['exercises_in_typographic_style', 'Exercises in Typographic Style', 'exercises_in_typographic_style'],
+            ['i-swork-gi', 'i-swork-gi', 'i-swork-gi'],
+            ['aberrations_in_the_aperture', 'Aberrations in the Aperture', 'aberrations']
         ]
         let projects_in_grid = []
         const projectGridContainer = document.getElementsByClassName('project-grid-container')[0]
@@ -34,7 +34,7 @@
             const projectGridItem = document.createElement('div')
             projectGridItem.classList.add('project-grid-item')
             projectGridItem.onclick = () => {
-                window.location.href = `project_pages/${projects[i][0]}.html`
+                window.location.href = `${projects[i][2]}`
             }
 
             const projectGridItemImg = document.createElement('img')
