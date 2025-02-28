@@ -45,7 +45,14 @@ body {
     color: var(--main_text);
     font-family: Bagnard-Serif-Regular, serif;
     font-size: 81px;
+    cursor: pointer;
 }
+
+.header-title:hover {
+    transform: scale(0.9);
+    transition: transform 0.5s;
+}
+
 
 .header {
     display: flex;

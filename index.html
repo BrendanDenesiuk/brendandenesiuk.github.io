@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class='header'>
-        <div class='header-title'>Brendan Denesiuk</div>
+        <div class='header-title' onclick="window.location.href='/'">Brendan Denesiuk</div>
         <div>
             <h2>Typography</h2>
             <h2>|</h2>
@@ -34,7 +34,8 @@
             const projectGridItem = document.createElement('div')
             projectGridItem.classList.add('project-grid-item')
             projectGridItem.onclick = () => {
-                window.location.href = `${projects[i][2]}`
+                // window.location.href = `${projects[i][2]}`
+                window.open(`${projects[i][2]}`, '_blank')
             }
 
             const projectGridItemImg = document.createElement('img')
