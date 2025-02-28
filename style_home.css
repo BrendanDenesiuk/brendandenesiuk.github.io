@@ -5,7 +5,14 @@
 
 @font-face {
     font-family: Bagnard-Serif-Regular;
-    src: url(assets/typefaces/Bagnard-Serif-Regular.otf);
+    src: url('assets/typefaces/Bagnard-Serif-Regular.otf');
+    font-weight: auto;
+    font-style: auto;
+}
+
+@font-face {
+    font-family: BagnardSans;
+    src: url(assets/typefaces/BagnardSans.otf);
     font-weight: auto;
     font-style: auto;
 }
@@ -55,7 +62,8 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     text-decoration: none;
-    font-family: BDOGrotesk-Light, serif;
+    font-family: BagnardSans, serif;
+    font-weight: lighter;
 }
 /*endregion*/
 
@@ -90,8 +98,9 @@ body {
 
 .project-grid-item h3 {
     color: var(--main_text);
-    font-family: BDOGrotesk-Light, serif;
+    font-family: BDOGrotesk-Bold, serif;
     margin-top: 0;
+    font-weight: lighter;
 }
 
 .bio-container {
@@ -112,6 +121,7 @@ body {
     text-align: justify;
     hyphens: auto;
     padding-bottom: 10px;
+    font-weight: lighter;
 }
 
 .bio-section-container img {
